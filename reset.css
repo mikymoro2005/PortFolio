@@ -1,0 +1,103 @@
+/* ==========================
+      Reset CSS
+   ========================== */
+
+/* Box sizing per tutti gli elementi */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Rimuove margini e padding di default */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Imposta altezza e larghezza al 100% */
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+/* Stile di base per il corpo */
+body {
+    line-height: 1.5;
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Rimuove decorazioni e colori di default sui link */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Liste senza pallini/marcatori */
+ul, ol {
+    list-style: none;
+}
+
+/* Migliora l'output di immagini e media */
+img, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tabella senza spaziatura */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Rimuove bordi di default nei form */
+button, input, select, textarea {
+    font: inherit;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+/* Cursor pointer per i bottoni */
+button {
+    cursor: pointer;
+}
+
+/* Rende i contenuti multimediali responsive */
+iframe {
+    border: 0;
+}
+
+/* Sezione di default per titoli */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+/* Rimuove bordi dagli elementi con focus per migliorare accessibilità */
+:focus {
+    outline: 2px solid #8bf;
+    outline-offset: 2px;
+}
+
+/* Definizione di selezione */
+::selection {
+    background: #8bf;
+    color: #fff;
+}
+
+/* Nasconde lo scrollbar visivamente */
+::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #8bf;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}

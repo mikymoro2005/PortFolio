@@ -1,0 +1,140 @@
+/* ==========================
+    Titoli e Typewriter
+   ========================== */
+
+   main {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 100px; /* Spazio per l'header fisso */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 9vmin;
+    color: #3B82F6;
+    font-family: Lato, sans-serif;
+    font-weight: 700;
+    margin: 1rem 0;
+    text-align: center; /* Centra il testo */
+}
+
+/* ==========================
+    Typewriter Animations
+   ========================== */
+
+/* Animazione di scrittura lettera per lettera */
+@keyframes typing {
+    0.0000%, 27.3488% { content: ""; }
+    1.1395%, 26.2093% { content: "d"; }
+    2.2791%, 25.0698% { content: "de"; }
+    3.4186%, 23.9302% { content: "dev"; }
+    4.5581%, 22.7907% { content: "deve"; }
+    5.6977%, 21.6512% { content: "devel"; }
+    6.8372%, 20.5116% { content: "develo"; }
+    7.9767%, 19.3721% { content: "develop"; }
+    9.1163%, 18.2326% { content: "develope"; }
+    10.2558%, 17.0930% { content: "developer"; }
+
+    30.7674%, 73.2791% { content: ""; }
+    31.9070%, 72.1395% { content: "s"; }
+    33.0465%, 71.0000% { content: "sk"; }
+    34.1860%, 70.8605% { content: "ski"; }
+    35.3256%, 69.7209% { content: "ski i"; }
+    36.4651%, 68.5814% { content: "ski in"; }
+    37.6047%, 67.4419% { content: "ski ins"; }
+    38.6977%, 66.2093% { content: "ski inst"; }
+    39.8372%, 65.0698% { content: "ski instr"; }
+    40.9767%, 64.9302% { content: "ski instru"; }
+    41.1163%, 63.7907% { content: "ski instruc"; }
+    42.2558%, 62.6512% { content: "ski instruct"; }
+    43.3953%, 61.5116% { content: "ski instructo"; }
+    44.5349%, 60.3721% { content: "ski instructor"; }
+
+    78.6279%, 96.8605% { content: ""; }
+    79.7674%, 95.7209% { content: "h"; }
+    80.9070%, 94.5814% { content: "hu"; }
+    82.0465%, 93.4419% { content: "hum"; }
+    83.1860%, 92.3023% { content: "huma"; }
+    84.3256%, 91.1628% { content: "human"; }
+}
+
+/* Cursore lampeggiante */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* ==========================
+    Stile Typewriter
+   ========================== */
+
+.typewriter {
+    --caret: currentcolor;
+}
+
+.typewriter::before {
+    content: "";
+    animation: typing 13.5s infinite;
+}
+
+.typewriter::after {
+    content: "";
+    border-right: 1px solid var(--caret);
+    animation: blink 0.5s linear infinite;
+}
+
+/* Variazione di spessore del cursore */
+.typewriter.thick::after {
+    border-right: 1ch solid var(--caret);
+}
+
+/* Rimuove il cursore */
+.typewriter.nocaret::after {
+    border-right: 0;
+}
+
+/* ==========================
+   Accessibilità (Riduzione Movimento)
+   ========================== */
+
+@media (prefers-reduced-motion) {
+    .typewriter::after {
+        animation: none;
+    }
+    
+    @keyframes sequencePopup {
+        0%, 100% { content: "developer"; }
+        25% { content: "writer"; }
+        50% { content: "reader"; }
+        75% { content: "human"; }
+    }
+    
+    .typewriter::before {
+        content: "developer";
+        animation: sequencePopup 12s linear infinite;
+    }
+}
+
+/* ==========================
+   Titoli centrati
+   ========================== */
+
+   .titles-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.titles-container h1 {
+    font-size: 2rem;
+    font-family: Lato, sans-serif;
+    margin-bottom: 20px;
+}
+
+.typewriter {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #3B82F6;
+}
